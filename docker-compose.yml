@@ -1,0 +1,10 @@
+version: '3'
+services:
+  firefox-openjdk:
+    build: .
+    command: /usr/bin/firefox-esr
+    environment:
+      - DISPLAY
+    volumes:
+      - $HOME/.Xauthority:/home/developer/.Xauthority
+    network_mode: host
